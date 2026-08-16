@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Residential Elevator Site Assessment | Apex Vertical Mobility</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Schedule a structural site assessment with our home lift engineers. Input your building parameters, stops count, and select preferred assessment dates.">
+    <meta name="keywords" content="book site visit elevator, residential lift assessment, home elevator survey, elevator dimension check, lift permit assessment">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Book Residential Elevator Site Assessment | Apex Vertical Mobility">
+    <meta property="og:description" content="Plan your residential lift with a professional engineering site evaluation.">
+    <meta property="og:image" content="assets/images/hero/hero_lift.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Rules -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Non-blocking Theme Toggle script -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body>
+
+    <!-- Top Premium Navbar -->
+    <nav class="navbar-premium" id="global-navbar" aria-label="Main Navigation">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand-premium" href="index.html" id="nav-brand">
+                <i class="fa-solid fa-compass-drafting"></i> APEX <span>MOBILITY</span>
+            </a>
+            
+            <div class="navbar-menu-container" id="nav-menu">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                    <li class="nav-item-dropdown">
+                        <a class="nav-link-premium" href="index.html" id="nav-home">Home <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                        <div class="dropdown-menu-premium" aria-label="Home dropdown">
+                            <a class="dropdown-item-premium" href="index.html">Architecture Focus (Home 1)</a>
+                            <a class="dropdown-item-premium" href="home-2.html">Product Finder & Specs (Home 2)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-premium" href="products.html" id="nav-products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="services.html" id="nav-services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="projects.html" id="nav-projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link-premium active" href="site-visit.html" id="nav-visit">Site Visit</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="contact.html" id="nav-contact">Contact</a></li>
+                </ul>
+                <!-- Mobile Actions Inside Menu Page -->
+                <div class="d-lg-none d-flex flex-column gap-3 mt-4 border-top pt-4">
+                    <div class="d-flex gap-2">
+                        <button class="theme-toggle-btn w-50" id="theme-toggle-mobile" aria-label="Toggle dark/light theme">
+                            <i class="fa-solid fa-moon me-2"></i> Theme
+                        </button>
+                        <button class="theme-toggle-btn rtl-toggle-btn w-50" id="rtl-toggle-mobile" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; letter-spacing: 0;">RTL</button>
+                    </div>
+                    <a href="signup.html" class="btn-premium btn-premium-primary text-center w-100">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="theme-toggle-btn rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+                    <a href="signup.html" class="btn-premium btn-premium-primary" id="nav-cta-signup">Sign Up</a>
+                </div>
+                <button class="hamburger-btn" id="hamburger-menu" aria-label="Open mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Header -->
+    <header class="subpage-header-premium" aria-label="Booking Header">
+        <div class="container">
+            <h1 class="font-heading fw-bold mb-2">Plan Your Lift Installation</h1>
+            <p class="mb-0">Fill out this 4-step wizard to arrange a structural survey by our technical designers.</p>
+        </div>
+    </header>
+
+    <!-- Wizard Form Section -->
+    <section class="section-padding bg-light" aria-label="Multi-step Booking Form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="booking-form-wrapper">
+                        
+                        <!-- Step Progress Nav -->
+                        <div class="booking-steps-nav" aria-label="Booking steps progress">
+                            <div class="step-indicator active" id="step-ind-0">
+                                <div class="step-circle">1</div>
+                                <span class="step-title-indicator">Contact Info</span>
+                            </div>
+                            <div class="step-indicator" id="step-ind-1">
+                                <div class="step-circle">2</div>
+                                <span class="step-title-indicator">Property Details</span>
+                            </div>
+                            <div class="step-indicator" id="step-ind-2">
+                                <div class="step-circle">3</div>
+                                <span class="step-title-indicator">Lift Needs</span>
+                            </div>
+                            <div class="step-indicator" id="step-ind-3">
+                                <div class="step-circle">4</div>
+                                <span class="step-title-indicator">Schedule Survey</span>
+                            </div>
+                        </div>
+
+                        <!-- Form Wizard Content -->
+                        <form id="site-visit-form">
+                            
+                            <!-- Panel 1: Contact Details -->
+                            <div class="form-step-panel active" id="step-panel-0">
+                                <h3 class="font-heading fw-bold fs-4 mb-4">Step 1: Customer Contact Details</h3>
+                                <div class="mb-3">
+                                    <label for="client-name" class="form-label-premium">Full Name *</label>
+                                    <input type="text" id="client-name" class="form-control-premium w-100" required placeholder="John Doe">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="client-email" class="form-label-premium">Email Address *</label>
+                                        <input type="email" id="client-email" class="form-control-premium w-100" required placeholder="john@example.com">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="client-phone" class="form-label-premium">Phone Number *</label>
+                                        <input type="tel" id="client-phone" class="form-control-premium w-100" required placeholder="+1 (555) 0199">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label-premium d-block mb-2">Preferred Contact Method</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="contact-method" id="method-email" value="email" checked>
+                                        <label class="form-check-label text-secondary" for="method-email">Email Notification</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="contact-method" id="method-phone" value="phone">
+                                        <label class="form-check-label text-secondary" for="method-phone">Phone Call</label>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <button type="button" class="btn-premium btn-premium-primary btn-wizard-next">Next Step <i class="fa-solid fa-chevron-right ms-1"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Panel 2: Property Details -->
+                            <div class="form-step-panel" id="step-panel-1">
+                                <h3 class="font-heading fw-bold fs-4 mb-4">Step 2: Property Parameters</h3>
+                                <div class="mb-4">
+                                    <label class="form-label-premium d-block mb-3">Select Property Type *</label>
+                                    <div class="form-radio-card-grid">
+                                        <div class="form-radio-card selected">
+                                            <input type="radio" name="finder-app" value="villa" checked>
+                                            <i class="fa-solid fa-tree-city"></i>
+                                            <span>Villa / Estate</span>
+                                        </div>
+                                        <div class="form-radio-card">
+                                            <input type="radio" name="finder-app" value="duplex">
+                                            <i class="fa-solid fa-building-user"></i>
+                                            <span>Duplex Apartment</span>
+                                        </div>
+                                        <div class="form-radio-card">
+                                            <input type="radio" name="finder-app" value="accessibility">
+                                            <i class="fa-solid fa-wheelchair"></i>
+                                            <span>Accessibility Retrofit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="property-stage" class="form-label-premium">Construction Phase</label>
+                                        <select id="property-stage" class="form-control-premium w-100">
+                                            <option value="new">New Construction (Drafting stage)</option>
+                                            <option value="retrofit">Existing House (Retrofit retrofit)</option>
+                                            <option value="modernize">Replace Existing Elevator</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="property-floors" class="form-label-premium">Number of Floors Served *</label>
+                                        <input type="number" id="property-floors" class="form-control-premium w-100" min="2" max="6" value="2" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="property-location" class="form-label-premium">Project City / State *</label>
+                                    <input type="text" id="property-location" class="form-control-premium w-100" required placeholder="Miami, FL">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn-premium btn-premium-secondary btn-wizard-prev"><i class="fa-solid fa-chevron-left me-1"></i> Back</button>
+                                    <button type="button" class="btn-premium btn-premium-primary btn-wizard-next">Next Step <i class="fa-solid fa-chevron-right ms-1"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Panel 3: Lift Requirements -->
+                            <div class="form-step-panel" id="step-panel-2">
+                                <h3 class="font-heading fw-bold fs-4 mb-4">Step 3: Lift Model Preferences</h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pref-lift-type" class="form-label-premium">Preferred Drive System</label>
+                                        <select id="pref-lift-type" class="form-control-premium w-100">
+                                            <option value="traction">Gearless MRL Traction (Apex/Optima)</option>
+                                            <option value="hydraulic">Eco-Hydraulic (Zenith)</option>
+                                            <option value="pneumatic">Pneumatic Vacuum (Aero)</option>
+                                            <option value="screw">Screw & Nut Platform (Horizon)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pref-capacity" class="form-label-premium">Estimated Load Capacity</label>
+                                        <select id="pref-capacity" class="form-control-premium w-100">
+                                            <option value="2-3">2-3 Persons (Up to 250 kg)</option>
+                                            <option value="4-5" selected>4-5 Persons (Up to 400 kg)</option>
+                                            <option value="6+">6+ Persons (450 kg+)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="pref-cabin-finishes" class="form-label-premium">Key Cabin Styling Preference</label>
+                                    <select id="pref-cabin-finishes" class="form-control-premium w-100">
+                                        <option value="glass">Panoramic Curved Glass</option>
+                                        <option value="veneer">Oak Wood veneers / LED highlights</option>
+                                        <option value="steel">Hairline Stainless Steel</option>
+                                        <option value="eco">Bamboo veneers eco-friendly</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn-premium btn-premium-secondary btn-wizard-prev"><i class="fa-solid fa-chevron-left me-1"></i> Back</button>
+                                    <button type="button" class="btn-premium btn-premium-primary btn-wizard-next">Next Step <i class="fa-solid fa-chevron-right ms-1"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Panel 4: Site Visit Scheduling -->
+                            <div class="form-step-panel" id="step-panel-3">
+                                <h3 class="font-heading fw-bold fs-4 mb-4">Step 4: Select Survey Date & Time</h3>
+                                
+                                <input type="hidden" id="selected-date" required>
+                                <input type="hidden" id="selected-time" required>
+
+                                <div class="mb-4">
+                                    <label class="form-label-premium d-block mb-3">Select Survey Date (Next 7 Business Days) *</label>
+                                    <div class="date-picker-custom-grid" id="custom-date-picker-grid">
+                                        <!-- Dynamic date picker cards -->
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label-premium d-block mb-3">Select Preferred Time Block *</label>
+                                    <div class="form-radio-card-grid">
+                                        <div class="form-radio-card time-slot-card" data-time="Morning (09:00 - 12:00)">
+                                            <i class="fa-solid fa-cloud-sun"></i>
+                                            <span>Morning (09:00 - 12:00)</span>
+                                        </div>
+                                        <div class="form-radio-card time-slot-card" data-time="Afternoon (12:00 - 16:00)">
+                                            <i class="fa-solid fa-sun"></i>
+                                            <span>Afternoon (12:00 - 16:00)</span>
+                                        </div>
+                                        <div class="form-radio-card time-slot-card" data-time="Evening (16:00 - 18:00)">
+                                            <i class="fa-solid fa-cloud-moon"></i>
+                                            <span>Evening (16:00 - 18:00)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="survey-notes" class="form-label-premium">Site Entry / Parking Notes</label>
+                                    <textarea id="survey-notes" class="form-control-premium w-100" rows="3" placeholder="E.g. Gated community codes, garage parking limits, etc."></textarea>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn-premium btn-premium-secondary btn-wizard-prev"><i class="fa-solid fa-chevron-left me-1"></i> Back</button>
+                                    <button type="submit" class="btn-premium btn-premium-primary" id="btn-wizard-submit">Request Site Visit</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium" aria-label="Footer Navigation">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Col 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="navbar-brand-premium text-white mb-3" style="font-size: 1.25rem;">
+                        <i class="fa-solid fa-compass-drafting text-primary"></i> APEX <span>MOBILITY</span>
+                    </div>
+                    <p class="footer-text mb-4">Residential elevator solutions designed for modern homes and villas, combining architectural integration, luxury cabin design, and multi-tier safety standards.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Col 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Elevator Models</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="product-details.html?model=apex-glass">Apex Panoramic Glass</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=zenith-hydraulic">Zenith Hydraulic Villa</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=aero-compact">Aero Ultra-Compact</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=horizon-platform">Horizon Platform Lift</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=optima-mrl">Optima MRL Lift</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=verde-eco">Verde Eco-Regenerative</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Services & Help</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="services.html">Installation Process</a></li>
+                        <li class="footer-link-item"><a href="maintenance.html">Preventive Maintenance</a></li>
+                        <li class="footer-link-item"><a href="maintenance-packages.html">Annual Maintenance Plans</a></li>
+                        <li class="footer-link-item"><a href="site-visit.html">Book Site Assessment</a></li>
+                        <li class="footer-link-item"><a href="login.html">Client Login</a></li>
+                        <li class="footer-link-item"><a href="signup.html">Register Project</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Contact & Standards</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) 555-0199<br><small class="text-muted">Technical Line (24/7 emergency support)</small></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>engineering@apexmobility.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>100 Industrial Parkway, Suite 400, Tech City, TC 94103</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    &copy; 2026 Apex Vertical Mobility. All rights reserved. 
+                    <span class="mx-2 text-muted">|</span> 
+                    <a href="404.html" style="color: #94A3B8;">Privacy Policy</a> 
+                    <span class="mx-2 text-muted">|</span> 
+                    <a href="404.html" style="color: #94A3B8;">Terms of Service</a>
+                </div>
+                <div class="tech-label text-warning" style="font-size: 0.7rem;">
+                    <i class="fa-solid fa-circle-exclamation me-1"></i> Compliance: Placeholders for structural certifications.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site-visit.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

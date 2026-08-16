@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Specifications & Model Finder | Apex Vertical Mobility</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Use our interactive home lift finder, compare elevator technical specifications, rated load capacities, shaft dimensions, and explore maintenance packages.">
+    <meta name="keywords" content="home lift comparison, residential elevator specs, elevator dimensions, shaft size, rated load elevator, lift packages">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Technical Specifications & Model Finder | Apex Vertical Mobility">
+    <meta property="og:description" content="Compare residential elevator models, filter by capacity and installation parameters, and view engineering specifications.">
+    <meta property="og:image" content="assets/images/hero/hero_lift.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Rules -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Non-blocking Theme Toggle script -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body>
+
+    <!-- Top Premium Navbar -->
+    <nav class="navbar-premium" id="global-navbar" aria-label="Main Navigation">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand-premium" href="index.html" id="nav-brand">
+                <i class="fa-solid fa-compass-drafting"></i> APEX <span>MOBILITY</span>
+            </a>
+            
+            <div class="navbar-menu-container" id="nav-menu">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                    <li class="nav-item-dropdown">
+                        <a class="nav-link-premium active" href="index.html" id="nav-home">Home <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                        <div class="dropdown-menu-premium" aria-label="Home dropdown">
+                            <a class="dropdown-item-premium" href="index.html">Architecture Focus (Home 1)</a>
+                            <a class="dropdown-item-premium" href="home-2.html">Product Finder & Specs (Home 2)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-premium" href="products.html" id="nav-products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="services.html" id="nav-services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="projects.html" id="nav-projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="site-visit.html" id="nav-visit">Site Visit</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="contact.html" id="nav-contact">Contact</a></li>
+                </ul>
+                <!-- Mobile Actions Inside Menu Page -->
+                <div class="d-lg-none d-flex flex-column gap-3 mt-4 border-top pt-4">
+                    <div class="d-flex gap-2">
+                        <button class="theme-toggle-btn w-50" id="theme-toggle-mobile" aria-label="Toggle dark/light theme">
+                            <i class="fa-solid fa-moon me-2"></i> Theme
+                        </button>
+                        <button class="theme-toggle-btn rtl-toggle-btn w-50" id="rtl-toggle-mobile" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; letter-spacing: 0;">RTL</button>
+                    </div>
+                    <a href="signup.html" class="btn-premium btn-premium-primary text-center w-100">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="theme-toggle-btn rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+                    <a href="signup.html" class="btn-premium btn-premium-primary" id="nav-cta-signup">Sign Up</a>
+                </div>
+                <button class="hamburger-btn" id="hamburger-menu" aria-label="Open mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Technical Hero Section -->
+    <header class="hero-premium d-flex align-items-center bg-dark text-white py-5" style="background-image: linear-gradient(135deg, #070B14 0%, #0F172A 100%);" aria-label="Technical Showcase Hero">
+        <div class="container">
+            <div class="row justify-content-center align-items-center min-vh-50 py-4 text-center">
+                <div class="col-lg-8 reveal-up d-flex flex-column align-items-center">
+                    <div class="tech-label text-warning mb-2">
+                        <i class="fa-solid fa-calculator me-2"></i> Engineering Configuration
+                    </div>
+                    <h1 class="fw-bold mb-3">Residential Lift Engineering Matrix</h1>
+                    <p class="lead text-secondary mb-4">Input your space conditions, explore structured load capacities, compare drive mechanisms side-by-side, and choose optimal home integration blueprints.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#finder-section" class="btn-premium btn-premium-primary">Configure Lift Model</a>
+                        <a href="#specs-section" class="btn-premium btn-premium-secondary">View Specification Tables</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Finder Section -->
+    <section class="section-padding bg-light" id="finder-section" aria-labelledby="finder-title">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center reveal-up">
+                    <div class="tech-label text-primary mb-2">Configuration Tool</div>
+                    <h2 id="finder-title" class="fw-bold">Interactive Lift Finder</h2>
+                    <p class="text-secondary">Answer these preliminary architectural questions to filter suitable vertical mobility systems for your home.</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10 reveal-up">
+                    <form id="product-finder-form" class="bg-white p-4 rounded border shadow-sm">
+                        <!-- Q1: Application / Property Type -->
+                        <div class="mb-4">
+                            <label class="form-label-premium d-block mb-3">What type of residence is the lift planned for?</label>
+                            <div class="form-radio-card-grid">
+                                <div class="form-radio-card selected">
+                                    <input type="radio" name="finder-app" value="villa" checked>
+                                    <i class="fa-solid fa-tree-city"></i>
+                                    <span>Luxury Villa</span>
+                                </div>
+                                <div class="form-radio-card">
+                                    <input type="radio" name="finder-app" value="compact">
+                                    <i class="fa-solid fa-building-user"></i>
+                                    <span>Duplex / Townhouse</span>
+                                </div>
+                                <div class="form-radio-card">
+                                    <input type="radio" name="finder-app" value="accessibility">
+                                    <i class="fa-solid fa-wheelchair"></i>
+                                    <span>Accessibility / Retrofit</span>
+                                </div>
+                                <div class="form-radio-card">
+                                    <input type="radio" name="finder-app" value="all">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    <span>Multi-Level Estate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 & Q3: Capacity and Installation -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="finder-capacity" class="form-label-premium">Estimated Passenger / Load Capacity</label>
+                                <select id="finder-capacity" class="form-control-premium w-100">
+                                    <option value="all">Select capacity range...</option>
+                                    <option value="2-3">2–3 Persons (Up to 250 kg)</option>
+                                    <option value="4-5">4–5 Persons (Up to 400 kg)</option>
+                                    <option value="6+">6+ Persons / Heavy Duty (450 kg+)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="finder-install" class="form-label-premium">Installation Structural Stage</label>
+                                <select id="finder-install" class="form-control-premium w-100">
+                                    <option value="all">Select construction type...</option>
+                                    <option value="new">New Construction (Shaft pre-designed)</option>
+                                    <option value="retrofit">Existing Home (Retrofit inside stairwell)</option>
+                                    <option value="exterior">Exterior Enclosure (Glass shaft on facade)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn-premium btn-premium-primary px-5 py-3">View Suitable Models</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison Matrix Section -->
+    <section class="section-padding" id="compare-section" aria-labelledby="compare-title">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center reveal-up">
+                    <div class="tech-label text-primary mb-2">Side-by-Side Review</div>
+                    <h2 id="compare-title" class="fw-bold">Product Comparison Matrix</h2>
+                    <p class="text-secondary">Examine specifications and space limits side-by-side. Choose models from the products directory to populate this matrix.</p>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="compare-empty-state" class="text-center py-5 border rounded bg-white reveal-up">
+                <i class="fa-solid fa-scale-balanced text-muted fs-1 mb-3"></i>
+                <h4 class="font-heading fw-bold text-primary">No Models Selected for Comparison</h4>
+                <p class="text-secondary mb-4">Go to the products directory, check "Compare" on up to four models, and return to review their parameters.</p>
+                <a href="products.html" class="btn-premium btn-premium-primary">Go to Products Directory</a>
+            </div>
+
+            <!-- Comparison Table Grid Wrapper (hidden if empty) -->
+            <div id="comparison-grid-wrapper" style="display: none;" class="reveal-up">
+                <div class="comparison-container">
+                    <table class="comparison-table" id="comparison-matrix-table" aria-label="Lift Comparison Table">
+                        <thead>
+                            <tr id="comparison-header-row">
+                                <!-- Dynamic Headers -->
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-table-body">
+                            <!-- Dynamic Specification Rows -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-muted mt-3 text-start" style="font-size: 0.8rem; font-family: var(--font-tech);">
+                    <i class="fa-solid fa-circle-info me-1"></i> Technical characteristics are sample values provided for template layouts and visual configurations. Verify parameters with local engineering guidelines before ordering.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specs Table Section -->
+    <section class="section-padding bg-white" id="specs-section" aria-labelledby="specs-table-title" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center reveal-up">
+                    <div class="tech-label text-primary mb-2">Technical Specifications</div>
+                    <h2 id="specs-table-title" class="fw-bold">Engineering Parameters & Dimensions</h2>
+                    <p class="text-secondary">Granular review of layout metrics, mechanical drives, energy inputs, and shaft rules. *All values are template indicators.*</p>
+                </div>
+            </div>
+
+            <!-- Desktop Specs Table (Hidden on Mobile) -->
+            <div class="technical-table-container reveal-up">
+                <table class="technical-table" aria-label="Elevator specifications table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Rated Load</th>
+                            <th>Stops</th>
+                            <th>Speed</th>
+                            <th>Shaft Size</th>
+                            <th>Cabin Finishes</th>
+                            <th>Drive Type</th>
+                            <th>Power Input</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Apex Panoramic</td>
+                            <td>400 kg (4-5 Pers)</td>
+                            <td>Up to 5</td>
+                            <td>0.15 - 0.3 m/s</td>
+                            <td>1200 x 1200 mm</td>
+                            <td>Curved glass, steel</td>
+                            <td>Gearless Traction</td>
+                            <td>Single Phase 220V</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Zenith Hydraulic</td>
+                            <td>450 kg (5-6 Pers)</td>
+                            <td>Up to 4</td>
+                            <td>0.15 m/s</td>
+                            <td>1400 x 1400 mm</td>
+                            <td>Oak wood veneer, LED</td>
+                            <td>Eco-Hydraulic</td>
+                            <td>Three Phase 380V</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Aero Compact</td>
+                            <td>250 kg (2-3 Pers)</td>
+                            <td>Up to 3</td>
+                            <td>0.15 m/s</td>
+                            <td>950 mm circular</td>
+                            <td>Polycarbonate cylinder</td>
+                            <td>Vacuum/Pneumatic</td>
+                            <td>Single Phase 220V</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Horizon Platform</td>
+                            <td>340 kg (Wheelchair)</td>
+                            <td>Up to 3</td>
+                            <td>0.15 m/s</td>
+                            <td>1250 x 1560 mm</td>
+                            <td>Open platform barrier</td>
+                            <td>Screw and Nut</td>
+                            <td>Single Phase 220V</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Optima MRL</td>
+                            <td>630 kg (8 Pers)</td>
+                            <td>Up to 6</td>
+                            <td>0.4 m/s</td>
+                            <td>1500 x 1600 mm</td>
+                            <td>Stainless steel, mirror</td>
+                            <td>Gearless Traction</td>
+                            <td>Three Phase 380V</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-primary font-heading">Verde Eco-Lift</td>
+                            <td>320 kg (3-4 Pers)</td>
+                            <td>Up to 4</td>
+                            <td>0.2 m/s</td>
+                            <td>1100 x 1150 mm</td>
+                            <td>Bamboo veneer panels</td>
+                            <td>Regenerative Traction</td>
+                            <td>Single Phase 220V</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobile Spec Cards Fallback (Visible on Mobile) -->
+            <div class="tech-spec-cards-container">
+                <!-- Card 1 -->
+                <div class="tech-spec-card">
+                    <div class="tech-spec-card-header">
+                        <h4 class="font-heading fw-bold text-primary mb-0">Apex Panoramic</h4>
+                        <span class="spec-badge">Traction</span>
+                    </div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Rated Load</span><span class="tech-value-card">400 kg</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Stops</span><span class="tech-value-card">Up to 5</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Speed</span><span class="tech-value-card">0.3 m/s</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Shaft Size</span><span class="tech-value-card">1200 x 1200 mm</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Power Input</span><span class="tech-value-card">220V Single-Phase</span></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="tech-spec-card">
+                    <div class="tech-spec-card-header">
+                        <h4 class="font-heading fw-bold text-primary mb-0">Zenith Hydraulic</h4>
+                        <span class="spec-badge">Hydraulic</span>
+                    </div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Rated Load</span><span class="tech-value-card">450 kg</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Stops</span><span class="tech-value-card">Up to 4</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Speed</span><span class="tech-value-card">0.15 m/s</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Shaft Size</span><span class="tech-value-card">1400 x 1400 mm</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Power Input</span><span class="tech-value-card">380V Three-Phase</span></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="tech-spec-card">
+                    <div class="tech-spec-card-header">
+                        <h4 class="font-heading fw-bold text-primary mb-0">Aero Compact</h4>
+                        <span class="spec-badge">Pneumatic</span>
+                    </div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Rated Load</span><span class="tech-value-card">250 kg</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Stops</span><span class="tech-value-card">Up to 3</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Speed</span><span class="tech-value-card">0.15 m/s</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Shaft Size</span><span class="tech-value-card">950 mm circular</span></div>
+                    <div class="tech-spec-row"><span class="tech-label-card">Power Input</span><span class="tech-value-card">220V Single-Phase</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Packages Comparison -->
+    <section class="section-padding bg-light animate-fade-in" id="maintenance-pricing" aria-labelledby="maintenance-pricing-title">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center reveal-up">
+                    <div class="tech-label text-primary mb-2">Service Protection</div>
+                    <h2 id="maintenance-pricing-title" class="fw-bold">Structured Maintenance Packages</h2>
+                    <p class="text-secondary">Ensure safety and long-term performance. *Prices shown are sample templates.*</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Package 1 -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-plan-name font-heading fw-bold text-primary">Essential</h3>
+                            <div class="pricing-price">$120<span>/mo</span></div>
+                            <p class="text-muted mb-0" style="font-size: 0.8rem;">For low-traffic residential lifts</p>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features-list">
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> 2 Scheduled Inspections / year</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Basic structural parts lubricating</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Complete safety checks report</li>
+                                <li class="pricing-feature-item excluded"><i class="fa-solid fa-xmark"></i> Priority emergency dispatch</li>
+                                <li class="pricing-feature-item excluded"><i class="fa-solid fa-xmark"></i> Annual modernization check</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="maintenance-packages.html" class="btn-premium btn-premium-outline w-100 text-center">Compare Plans</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 (Featured) -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="pricing-card featured">
+                        <span class="pricing-card-badge">Most Popular</span>
+                        <div class="pricing-header">
+                            <h3 class="pricing-plan-name font-heading fw-bold text-primary">Care Plus</h3>
+                            <div class="pricing-price">$180<span>/mo</span></div>
+                            <p class="text-muted mb-0" style="font-size: 0.8rem;">Recommended for standard home use</p>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features-list">
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> 4 Scheduled Inspections / year</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Core parts lubricating & adjustments</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Complete safety checks report</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> 24-Hour emergency telephone access</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Priority repair dispatch</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="site-visit.html?package=care" class="btn-premium btn-premium-primary w-100 text-center">Select Care Plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-plan-name font-heading fw-bold text-primary">Premium</h3>
+                            <div class="pricing-price">$260<span>/mo</span></div>
+                            <p class="text-muted mb-0" style="font-size: 0.8rem;">Comprehensive technical cover</p>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features-list">
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> 6 Scheduled Inspections / year</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> All parts lubricating & calibration</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Complete safety checks report</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Priority emergency dispatch</li>
+                                <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> Wear-and-tear components preview</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="maintenance-packages.html" class="btn-premium btn-premium-outline w-100 text-center">Compare Plans</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Visit Form Booking CTA Section -->
+    <section class="section-padding" aria-labelledby="booking-cta-title">
+        <div class="container bg-white p-5 rounded border shadow-sm">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-7 reveal-up">
+                    <h2 id="booking-cta-title" class="fw-bold mb-3">Schedule an Engineering Site Assessment</h2>
+                    <p class="text-secondary mb-0">Our elevator technicians will inspect your building structure, take precision dimensions, outline power requirements, and design a preliminary shaft map.</p>
+                </div>
+                <div class="col-lg-4 text-start text-lg-end mt-4 mt-lg-0 reveal-up">
+                    <a href="site-visit.html" class="btn-premium btn-premium-primary py-3 px-4">Book Site Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium" aria-label="Footer Navigation">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Col 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="navbar-brand-premium text-white mb-3" style="font-size: 1.25rem;">
+                        <i class="fa-solid fa-compass-drafting text-primary"></i> APEX <span>MOBILITY</span>
+                    </div>
+                    <p class="footer-text mb-4">Residential elevator solutions designed for modern homes and villas, combining architectural integration, luxury cabin design, and multi-tier safety standards.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Col 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Elevator Models</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="product-details.html?model=apex-glass">Apex Panoramic Glass</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=zenith-hydraulic">Zenith Hydraulic Villa</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=aero-compact">Aero Ultra-Compact</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=horizon-platform">Horizon Platform Lift</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=optima-mrl">Optima MRL Lift</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=verde-eco">Verde Eco-Regenerative</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Services & Help</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="services.html">Installation Process</a></li>
+                        <li class="footer-link-item"><a href="maintenance.html">Preventive Maintenance</a></li>
+                        <li class="footer-link-item"><a href="maintenance-packages.html">Annual Maintenance Plans</a></li>
+                        <li class="footer-link-item"><a href="site-visit.html">Book Site Assessment</a></li>
+                        <li class="footer-link-item"><a href="login.html">Client Login</a></li>
+                        <li class="footer-link-item"><a href="signup.html">Register Project</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Contact & Standards</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) 555-0199<br><small class="text-muted">Technical Line (24/7 emergency support)</small></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>engineering@apexmobility.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>100 Industrial Parkway, Suite 400, Tech City, TC 94103</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    &copy; 2026 Apex Vertical Mobility. All rights reserved. 
+                    <span class="mx-2 text-muted">|</span> 
+                    <a href="404.html" style="color: #94A3B8;">Privacy Policy</a> 
+                    <span class="mx-2 text-muted">|</span> 
+                    <a href="404.html" style="color: #94A3B8;">Terms of Service</a>
+                </div>
+                <div class="tech-label text-warning" style="font-size: 0.7rem;">
+                    <i class="fa-solid fa-circle-exclamation me-1"></i> Compliance: Placeholders for structural certifications.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product-filter.js"></script>
+    <script src="assets/js/comparison.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

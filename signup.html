@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Project Portal | Apex Vertical Mobility</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Register your lift installation project to track engineering drawings, safety inspection reports, and connect directly with installers.">
+    <meta name="keywords" content="register project elevator, client sign up lift, home elevator portal registration, project tracking access">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Register Project Portal | Apex Vertical Mobility">
+    <meta property="og:description" content="Access your home lift installation progress.">
+    <meta property="og:image" content="assets/images/hero/hero_lift.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Rules -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Non-blocking Theme Toggle script -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body>
+
+    <!-- Floating Theme/RTL Controls -->
+    <div class="position-fixed top-0 end-0 p-3 d-flex gap-2" style="z-index: 1050;">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="theme-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+    </div>
+
+    <!-- Register Container -->
+    <main class="auth-container animate-fade-in" aria-label="Signup Panel" style="min-height: 100vh;">
+        <div class="auth-card">
+            <div class="text-center mb-4">
+                <a class="navbar-brand-premium" href="index.html" style="font-size: 1.6rem; display: inline-block;">
+                    <i class="fa-solid fa-compass-drafting" style="color: var(--accent-blue);"></i> APEX <span style="color: var(--text-primary);">MOBILITY</span>
+                </a>
+            </div>
+            <h1 class="font-heading fw-bold fs-4 mb-2 text-center text-primary">Register Project Access</h1>
+            <p class="text-secondary text-center mb-4" style="font-size: 0.85rem;">Input your contract details to set up structural tracking folders.</p>
+            
+            <form id="signup-form">
+                <div class="mb-3">
+                    <label for="signup-name" class="form-label-premium">Full Name *</label>
+                    <input type="text" id="signup-name" class="form-control-premium w-100" required placeholder="John Doe">
+                </div>
+                <div class="mb-3">
+                    <label for="signup-email" class="form-label-premium">Email Address *</label>
+                    <input type="email" id="signup-email" class="form-control-premium w-100" required placeholder="john@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="signup-ref" class="form-label-premium">Project Reference Number (Optional)</label>
+                    <input type="text" id="signup-ref" class="form-control-premium w-100" placeholder="e.g. APX-2026-9874">
+                    <small class="text-muted" style="font-size: 0.75rem; display: block; mt-1;">Provided on your layout proposal sheet or site visit confirmation email.</small>
+                </div>
+                <div class="mb-3">
+                    <label for="signup-password" class="form-label-premium">Set Password *</label>
+                    <input type="password" id="signup-password" class="form-control-premium w-100" required placeholder="Min 8 characters">
+                </div>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="signup-agree" required>
+                    <label class="form-check-label text-secondary" for="signup-agree" style="font-size: 0.85rem; cursor: pointer; user-select: none;">I agree to the <a href="404.html" style="color: var(--accent-blue);">Terms and Conditions</a> and Privacy Policy *</label>
+                </div>
+                <button type="submit" class="btn-premium btn-premium-primary w-100 py-2.5 mb-3">Create Client Account</button>
+            </form>
+
+            <div class="position-relative text-center my-4">
+                <hr class="text-secondary opacity-25">
+                <span class="position-absolute top-50 start-50 translate-middle px-3 text-secondary" style="font-size: 0.75rem; background-color: var(--card-bg);">OR</span>
+            </div>
+
+            <div class="d-flex gap-2 mb-3">
+                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                    <i class="fa-brands fa-google" style="color: #EA4335;"></i> Google
+                </button>
+                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                    <i class="fa-brands fa-apple"></i> Apple
+                </button>
+            </div>
+            
+            <div class="text-center text-secondary" style="font-size: 0.85rem;">
+                Already have project access? <a href="login.html" style="color: var(--accent-blue);">Sign in</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    
+    <!-- Signup Simulation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signup-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('signup-name').value;
+
+                // Simple simulated transition to login
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...';
+                submitBtn.setAttribute('disabled', 'true');
+
+                setTimeout(() => {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'form-feedback-overlay active';
+                    overlay.innerHTML = `
+                        <div class="form-feedback-modal animate-scale-up">
+                            <div class="form-feedback-icon success">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h3 class="text-primary font-heading fw-bold mb-3">Registration Complete</h3>
+                            <p class="text-secondary mb-4">Hello ${name}, your project portal account has been created. Proceed to login page.</p>
+                            <button class="btn-premium btn-premium-primary w-100" id="close-signup-btn">Go to Login</button>
+                        </div>
+                    `;
+                    document.body.appendChild(overlay);
+                    document.getElementById('close-signup-btn').addEventListener('click', () => {
+                        window.location.href = 'login.html';
+                    });
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

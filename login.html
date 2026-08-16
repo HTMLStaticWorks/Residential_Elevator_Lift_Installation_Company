@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Project Login | Apex Vertical Mobility</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Access your home elevator installation timeline, structural drawings downloads, and log maintenance schedules via the client dashboard portal.">
+    <meta name="keywords"
+        content="client portal login, elevator dashboard, lift project tracking, residential elevator support">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Customer Project Login | Apex Vertical Mobility">
+    <meta property="og:description" content="Sign in to view engineering files and schedule inspections.">
+    <meta property="og:image" content="assets/images/hero/hero_lift.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Rules -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Non-blocking Theme Toggle script -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+
+<body>
+
+    <!-- Floating Theme/RTL Controls -->
+    <div class="position-fixed top-0 end-0 p-3 d-flex gap-2" style="z-index: 1050;">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="theme-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+    </div>
+
+    <!-- Login Container -->
+    <main class="auth-container animate-fade-in" aria-label="Login Panel" style="min-height: 100vh;">
+        <div class="auth-card">
+            <div class="text-center mb-4">
+                <a class="navbar-brand-premium" href="index.html" style="font-size: 1.6rem; display: inline-block;">
+                    <i class="fa-solid fa-compass-drafting" style="color: var(--accent-blue);"></i> APEX <span
+                        style="color: var(--text-primary);">MOBILITY</span>
+                </a>
+            </div>
+            <h1 class="font-heading fw-bold fs-4 mb-2 text-center text-primary">Client Project Login</h1>
+            <p class="text-secondary text-center mb-4" style="font-size: 0.85rem;">Access blueprints, structural
+                permits, and maintenance diaries.</p>
+
+            <form id="login-form">
+                <div class="mb-3">
+                    <label for="login-email" class="form-label-premium">Registered Email *</label>
+                    <input type="email" id="login-email" class="form-control-premium w-100" required
+                        placeholder="john@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="login-password" class="form-label-premium">Password *</label>
+                    <input type="password" id="login-password" class="form-control-premium w-100" required
+                        placeholder="••••••••">
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check mb-0">
+                        <input type="checkbox" class="form-check-input" id="login-remember">
+                        <label class="form-check-label text-secondary text-nowrap" for="login-remember"
+                            style="font-size: 0.85rem; cursor: pointer; user-select: none;">Remember me</label>
+                    </div>
+                    <a href="404.html" style="font-size: 0.85rem; color: var(--accent-blue);" class="text-decoration-none">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-premium btn-premium-primary w-100 py-2.5 mb-3">Sign In to
+                    Dashboard</button>
+            </form>
+
+            <div class="position-relative text-center my-4">
+                <hr class="text-secondary opacity-25">
+                <span class="position-absolute top-50 start-50 translate-middle px-3 text-secondary" style="font-size: 0.75rem; background-color: var(--card-bg);">OR</span>
+            </div>
+
+            <div class="d-flex gap-2 mb-3">
+                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                    <i class="fa-brands fa-google" style="color: #EA4335;"></i> Google
+                </button>
+                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                    <i class="fa-brands fa-apple"></i> Apple
+                </button>
+            </div>
+
+            <div class="text-center text-secondary" style="font-size: 0.85rem;">
+                No registered project? <a href="signup.html" style="color: var(--accent-blue);">Register project</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+    <!-- Login Simulation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('login-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('login-email').value;
+
+                // Simple simulated transition to dashboard
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading Dashboard...';
+                submitBtn.setAttribute('disabled', 'true');
+
+                setTimeout(() => {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'form-feedback-overlay active';
+                    overlay.innerHTML = `
+                        <div class="form-feedback-modal animate-scale-up">
+                            <div class="form-feedback-icon success">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h3 class="text-primary font-heading fw-bold mb-3">Login Successful</h3>
+                            <p class="text-secondary mb-4">Simulated Portal Redirect. Welcome back to Apex Mobility Client Hub.</p>
+                            <button class="btn-premium btn-premium-primary w-100" id="close-login-btn">Go to Home</button>
+                        </div>
+                    `;
+                    document.body.appendChild(overlay);
+                    document.getElementById('close-login-btn').addEventListener('click', () => {
+                        window.location.href = 'index.html';
+                    });
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

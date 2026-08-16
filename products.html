@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Elevator Models & Home Lifts | Apex Vertical Mobility</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Browse our catalog of premium residential lifts. Filter by capacity, installation type, and drive mechanism. Discover compact, villa, and accessibility models.">
+    <meta name="keywords"
+        content="home lifts catalog, residential elevators models, pneumatic lift, hydraulic home lift, machine room less elevator, villa lift">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Residential Elevator Models & Home Lifts | Apex Vertical Mobility">
+    <meta property="og:description"
+        content="Explore our high-performance home lifts range, tailored for modern residences. Compare dimensions and technical details.">
+    <meta property="og:image" content="assets/images/hero/hero_lift.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Rules -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Non-blocking Theme Toggle script -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Premium Navbar -->
+    <nav class="navbar-premium" id="global-navbar" aria-label="Main Navigation">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand-premium" href="index.html" id="nav-brand">
+                <i class="fa-solid fa-compass-drafting"></i> APEX <span>MOBILITY</span>
+            </a>
+
+            <div class="navbar-menu-container" id="nav-menu">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                    <li class="nav-item-dropdown">
+                        <a class="nav-link-premium" href="index.html" id="nav-home">Home <i
+                                class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                        <div class="dropdown-menu-premium" aria-label="Home dropdown">
+                            <a class="dropdown-item-premium" href="index.html">Architecture Focus (Home 1)</a>
+                            <a class="dropdown-item-premium" href="home-2.html">Product Finder & Specs (Home 2)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-premium active" href="products.html"
+                            id="nav-products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="services.html" id="nav-services">Services</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-premium" href="projects.html" id="nav-projects">Projects</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link-premium" href="site-visit.html" id="nav-visit">Site
+                            Visit</a></li>
+                    <li class="nav-item"><a class="nav-link-premium" href="contact.html" id="nav-contact">Contact</a>
+                    </li>
+                </ul>
+                <!-- Mobile Actions Inside Menu Page -->
+                <div class="d-lg-none d-flex flex-column gap-3 mt-4 border-top pt-4">
+                    <div class="d-flex gap-2">
+                        <button class="theme-toggle-btn w-50" id="theme-toggle-mobile" aria-label="Toggle dark/light theme">
+                            <i class="fa-solid fa-moon me-2"></i> Theme
+                        </button>
+                        <button class="theme-toggle-btn rtl-toggle-btn w-50" id="rtl-toggle-mobile" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; letter-spacing: 0;">RTL</button>
+                    </div>
+                    <a href="signup.html" class="btn-premium btn-premium-primary text-center w-100">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="theme-toggle-btn rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+                    <a href="signup.html" class="btn-premium btn-premium-primary" id="nav-cta-signup">Sign Up</a>
+                </div>
+                <button class="hamburger-btn" id="hamburger-menu" aria-label="Open mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Header -->
+    <header class="subpage-header-premium" aria-label="Products Banner">
+        <div class="container">
+            <h1 class="font-heading fw-bold mb-2">Residential Lift Directory</h1>
+            <p class="mb-0">Explore models categorized by application parameters, dimensional limits, and mechanical
+                drives.</p>
+        </div>
+    </header>
+
+    <!-- Filter Block & Directory Grid -->
+    <section class="section-padding" aria-label="Product Search and Grid">
+        <div class="container">
+            <!-- Filter controls bar -->
+            <div class="row align-items-center g-3 mb-5 p-3 rounded border bg-white shadow-sm reveal-up">
+                <div class="col-lg-5">
+                    <div class="portfolio-filter-nav justify-content-start mb-0">
+                        <button class="filter-btn-premium active" data-filter="all">All Models</button>
+                        <button class="filter-btn-premium" data-filter="villa">Villa Lifts</button>
+                        <button class="filter-btn-premium" data-filter="compact">Compact Lifts</button>
+                        <button class="filter-btn-premium" data-filter="accessibility">Accessibility</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="filter-capacity" class="text-nowrap font-heading fw-bold"
+                            style="font-size: 0.85rem; color: var(--text-primary);">Capacity:</label>
+                        <select id="filter-capacity" class="form-control-premium w-100 py-1">
+                            <option value="all">Any Load</option>
+                            <option value="2-3">2-3 Persons (Up to 250 kg)</option>
+                            <option value="4-5">4-5 Persons (Up to 400 kg)</option>
+                            <option value="6+">6+ Persons (450 kg+)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="filter-drive" class="text-nowrap font-heading fw-bold"
+                            style="font-size: 0.85rem; color: var(--text-primary);">Drive Type:</label>
+                        <select id="filter-drive" class="form-control-premium w-100 py-1">
+                            <option value="all">Any Drive</option>
+                            <option value="traction">Gearless Traction</option>
+                            <option value="hydraulic">Hydraulic</option>
+                            <option value="vacuum">Pneumatic Vacuum</option>
+                            <option value="screw">Screw & Nut</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4" id="product-catalog-grid">
+
+                <!-- Product Card 1 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="villa" data-capacity="4-5"
+                    data-drive="traction">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Villa Lifts</span>
+                            <img src="assets/images/products/apex_glass.png" alt="Apex Glass Lift" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Apex Panoramic Glass</h3>
+                            <p class="product-desc">Scenic structure featuring 360-degree clear visibility. An
+                                architectural highlight for premium houses and stairwells.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">400 kg (4-5 Pers)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">5 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Gearless Traction</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">50 mm (Shallow)</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=apex-glass"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="apex-glass"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="villa" data-capacity="6+"
+                    data-drive="hydraulic">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Villa Lifts</span>
+                            <img src="assets/images/products/zenith_hydraulic.png" alt="Zenith Hydraulic"
+                                loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Zenith Hydraulic Villa Lift</h3>
+                            <p class="product-desc">Heavy-duty drive and hand-finished premium veneer cabin details.
+                                Highly comfortable ride and exceptionally silent.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">450 kg (5-6 Pers)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">4 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Eco-Hydraulic</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">100 mm</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=zenith-hydraulic"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="zenith-hydraulic"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="compact" data-capacity="2-3"
+                    data-drive="vacuum">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Compact Lifts</span>
+                            <img src="assets/images/products/aero_compact.png" alt="Aero Vacuum" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Aero Ultra-Compact</h3>
+                            <p class="product-desc">Cylindrical pneumatic vacuum elevator. Requires zero pit or headroom
+                                alterations. Ideal for quick retrofits.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">250 kg (2-3 Pers)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">3 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Pneumatic Vacuum</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">0 mm (Pitless)</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=aero-compact"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="aero-compact"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="accessibility" data-capacity="4-5"
+                    data-drive="screw">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Accessibility</span>
+                            <img src="assets/images/products/horizon_platform.png" alt="Horizon Platform"
+                                loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Horizon Platform Lift</h3>
+                            <p class="product-desc">Open platform layout designed to accommodate wheelchairs and helpers
+                                safely. Built with sturdy protective barriers.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">340 kg (Wheelchair)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">3 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Screw and Nut</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">50 mm / Ramp</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=horizon-platform"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="horizon-platform"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="villa" data-capacity="6+"
+                    data-drive="traction">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Villa Lifts</span>
+                            <img src="assets/images/products/optima_mrl.png" alt="Optima MRL" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Optima MRL Lift</h3>
+                            <p class="product-desc">Machine-Room-Less passenger elevator providing higher speed and
+                                capacity. Hairline stainless steel cabin finishes.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">630 kg (8 Pers)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">6 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Gearless Traction</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">200 mm</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=optima-mrl"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="optima-mrl"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="col-lg-4 col-md-6 product-card-col" data-category="compact" data-capacity="4-5"
+                    data-drive="traction">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <span class="product-badge-overlay spec-badge">Compact Lifts</span>
+                            <img src="assets/images/products/verde_eco.png" alt="Verde Eco" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title font-heading fw-bold">Verde Eco-Regenerative</h3>
+                            <p class="product-desc">Green building certified. Feeds power back to the grid during
+                                down-cycles. Custom bamboo interior.</p>
+                            <div class="product-specs-list">
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">320 kg (3-4 Pers)</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Max Stops</span>
+                                    <span class="spec-value">4 Stops</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Drive Type</span>
+                                    <span class="spec-value">Regenerative Traction</span>
+                                </div>
+                                <div class="product-spec-item">
+                                    <span class="spec-label">Pit Depth</span>
+                                    <span class="spec-value">100 mm</span>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-details.html?model=verde-eco"
+                                    class="btn-premium btn-premium-secondary">View Details</a>
+                                <button class="btn-premium btn-premium-outline btn-add-compare"
+                                    data-model-id="verde-eco"><i class="fa-solid fa-scale-balanced"></i>
+                                    Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Drive Guide Section -->
+    <section class="section-padding bg-light" style="border-top: 1px solid var(--border-color);"
+        aria-labelledby="guide-title">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center reveal-up">
+                    <div class="tech-label text-primary mb-2">Technical Guidance</div>
+                    <h2 id="guide-title" class="fw-bold">Mechanical Drive Selection Matrix</h2>
+                    <p class="text-secondary">Explore the primary structural drive technologies available for
+                        residential installations to find the optimal match for your home's layout.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- System 1 -->
+                <div class="col-lg-3 col-md-6 reveal-up">
+                    <div class="bg-white p-4 rounded border h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fa-solid fa-gears text-primary fs-4"></i>
+                            <h4 class="font-heading fw-bold fs-6 mb-0">Gearless Traction</h4>
+                        </div>
+                        <p class="text-secondary mb-3" style="font-size: 0.85rem;">Uses a high-efficiency motor and
+                            counterweight. Exceptionally quiet, smooth, and suitable for heights.</p>
+                        <ul class="list-unstyled text-secondary" style="font-size: 0.8rem; padding-left: 0;">
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Smooth travel curve</li>
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Highly energy-efficient</li>
+                            <li><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Requires shallow pit</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- System 2 -->
+                <div class="col-lg-3 col-md-6 reveal-up">
+                    <div class="bg-white p-4 rounded border h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fa-solid fa-oil-can text-primary fs-4"></i>
+                            <h4 class="font-heading fw-bold fs-6 mb-0">Eco-Hydraulic</h4>
+                        </div>
+                        <p class="text-secondary mb-3" style="font-size: 0.85rem;">Utilizes a hydraulic fluid pump.
+                            Features a robust lifting capacity, making it perfect for heavy wood.</p>
+                        <ul class="list-unstyled text-secondary" style="font-size: 0.8rem; padding-left: 0;">
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> High weight capacity</li>
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Quiet pump layout</li>
+                            <li><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Requires control cabinet</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- System 3 -->
+                <div class="col-lg-3 col-md-6 reveal-up">
+                    <div class="bg-white p-4 rounded border h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fa-solid fa-wind text-primary fs-4"></i>
+                            <h4 class="font-heading fw-bold fs-6 mb-0">Pneumatic Vacuum</h4>
+                        </div>
+                        <p class="text-secondary mb-3" style="font-size: 0.85rem;">Air pressure-driven system.
+                            Self-supporting structure that requires zero shaft construction or concrete pits.</p>
+                        <ul class="list-unstyled text-secondary" style="font-size: 0.8rem; padding-left: 0;">
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> 360-degree panoramic view
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Quick 3-day installation</li>
+                            <li><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Limited to 250kg load</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- System 4 -->
+                <div class="col-lg-3 col-md-6 reveal-up">
+                    <div class="bg-white p-4 rounded border h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fa-solid fa-bolt-lightning text-primary fs-4"></i>
+                            <h4 class="font-heading fw-bold fs-6 mb-0">Screw & Nut Drive</h4>
+                        </div>
+                        <p class="text-secondary mb-3" style="font-size: 0.85rem;">Electrical screw drive. Offers
+                            maximum space efficiency with extremely compact dimensions for retrofits.</p>
+                        <ul class="list-unstyled text-secondary" style="font-size: 0.8rem; padding-left: 0;">
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Tiny shaft footprint</li>
+                            <li><i class="fa-solid fa-circle-check text-success me-1"></i> Zero pit required</li>
+                            <li><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Slightly slower speed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium" aria-label="Footer Navigation">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Col 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="navbar-brand-premium text-white mb-3" style="font-size: 1.25rem;">
+                        <i class="fa-solid fa-compass-drafting text-primary"></i> APEX <span>MOBILITY</span>
+                    </div>
+                    <p class="footer-text mb-4">Residential elevator solutions designed for modern homes and villas,
+                        combining architectural integration, luxury cabin design, and multi-tier safety standards.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="YouTube"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Elevator Models</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="product-details.html?model=apex-glass">Apex Panoramic
+                                Glass</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=zenith-hydraulic">Zenith
+                                Hydraulic Villa</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=aero-compact">Aero
+                                Ultra-Compact</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=horizon-platform">Horizon
+                                Platform Lift</a></li>
+                        <li class="footer-link-item"><a href="product-details.html?model=optima-mrl">Optima MRL Lift</a>
+                        </li>
+                        <li class="footer-link-item"><a href="product-details.html?model=verde-eco">Verde
+                                Eco-Regenerative</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Services & Help</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="services.html">Installation Process</a></li>
+                        <li class="footer-link-item"><a href="maintenance.html">Preventive Maintenance</a></li>
+                        <li class="footer-link-item"><a href="maintenance-packages.html">Annual Maintenance Plans</a>
+                        </li>
+                        <li class="footer-link-item"><a href="site-visit.html">Book Site Assessment</a></li>
+                        <li class="footer-link-item"><a href="login.html">Client Login</a></li>
+                        <li class="footer-link-item"><a href="signup.html">Register Project</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Contact & Standards</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) 555-0199<br><small class="text-muted">Technical Line (24/7 emergency
+                                support)</small></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>engineering@apexmobility.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>100 Industrial Parkway, Suite 400, Tech City, TC 94103</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    &copy; 2026 Apex Vertical Mobility. All rights reserved.
+                    <span class="mx-2 text-muted">|</span>
+                    <a href="404.html" style="color: #94A3B8;">Privacy Policy</a>
+                    <span class="mx-2 text-muted">|</span>
+                    <a href="404.html" style="color: #94A3B8;">Terms of Service</a>
+                </div>
+                <div class="tech-label text-warning" style="font-size: 0.7rem;">
+                    <i class="fa-solid fa-circle-exclamation me-1"></i> Compliance: Placeholders for structural
+                    certifications.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product-filter.js"></script>
+    <script src="assets/js/comparison.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>
