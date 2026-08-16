@@ -64,11 +64,20 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: var(--font-heading);
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 550 !important;
     line-height: 1.25;
+}
+
+body, p, .lead {
+    font-weight: 400;
+}
+
+strong, b, .fw-bold, .fw-semibold, .fw-medium {
+    font-weight: 550 !important;
 }
 
 a {
@@ -417,16 +426,16 @@ a:hover {
 }
 
 .hero-spec-strip {
-    background-color: rgba(255, 255, 255, 0.03);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     padding: 1.5rem 0;
 }
 .hero-spec-item {
     font-family: var(--font-tech);
-    color: #F8FAFC;
+    color: var(--text-primary);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 550;
     display: flex;
     align-items: center;
     gap: 0.75rem;
