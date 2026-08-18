@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Project Portal | Apex Vertical Mobility</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Register your lift installation project to track engineering drawings, safety inspection reports, and connect directly with installers.">
-    <meta name="keywords" content="register project elevator, client sign up lift, home elevator portal registration, project tracking access">
-    
+    <meta name="description"
+        content="Register your lift installation project to track engineering drawings, safety inspection reports, and connect directly with installers.">
+    <meta name="keywords"
+        content="register project elevator, client sign up lift, home elevator portal registration, project tracking access">
+
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Register Project Portal | Apex Vertical Mobility">
     <meta property="og:description" content="Access your home lift installation progress.">
@@ -19,7 +22,7 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom Style Rules -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
@@ -28,6 +31,7 @@
     <!-- Non-blocking Theme Toggle script -->
     <script src="assets/js/theme-toggle.js"></script>
 </head>
+
 <body>
 
     <!-- Floating Theme/RTL Controls -->
@@ -35,7 +39,8 @@
         <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
             <i class="fa-solid fa-moon"></i>
         </button>
-        <button class="theme-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support" style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
+        <button class="theme-toggle-btn rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL support"
+            style="font-family: var(--font-tech); font-weight: 600; font-size: 0.75rem; padding: 0; letter-spacing: 0;">RTL</button>
     </div>
 
     <!-- Register Container -->
@@ -43,51 +48,72 @@
         <div class="auth-card">
             <div class="text-center mb-4">
                 <a class="navbar-brand-premium" href="index.html" style="font-size: 1.6rem; display: inline-block;">
-                    <i class="fa-solid fa-compass-drafting" style="color: var(--accent-blue);"></i> APEX <span style="color: var(--text-primary);">MOBILITY</span>
+                    <i class="fa-solid fa-compass-drafting" style="color: var(--accent-blue);"></i> APEX <span
+                        style="color: var(--text-primary);">MOBILITY</span>
                 </a>
             </div>
             <h1 class="font-heading fw-bold fs-4 mb-2 text-center text-primary">Register Project Access</h1>
-            <p class="text-secondary text-center mb-4" style="font-size: 0.85rem;">Input your contract details to set up structural tracking folders.</p>
-            
+            <p class="text-secondary text-center mb-4" style="font-size: 0.85rem;">Input your contract details to set up
+                structural tracking folders.</p>
+
             <form id="signup-form">
                 <div class="mb-3">
                     <label for="signup-name" class="form-label-premium">Full Name *</label>
-                    <input type="text" id="signup-name" class="form-control-premium w-100" required placeholder="John Doe">
+                    <input type="text" id="signup-name" class="form-control-premium w-100" required
+                        placeholder="John Doe">
                 </div>
                 <div class="mb-3">
                     <label for="signup-email" class="form-label-premium">Email Address *</label>
-                    <input type="email" id="signup-email" class="form-control-premium w-100" required placeholder="john@example.com">
+                    <input type="email" id="signup-email" class="form-control-premium w-100" required
+                        placeholder="john@example.com">
                 </div>
                 <div class="mb-3">
                     <label for="signup-ref" class="form-label-premium">Project Reference Number (Optional)</label>
-                    <input type="text" id="signup-ref" class="form-control-premium w-100" placeholder="e.g. APX-2026-9874">
-                    <small class="text-muted" style="font-size: 0.75rem; display: block; mt-1;">Provided on your layout proposal sheet or site visit confirmation email.</small>
+                    <input type="text" id="signup-ref" class="form-control-premium w-100"
+                        placeholder="e.g. APX-2026-9874">
+                    <small class="text-muted" style="font-size: 0.75rem; display: block; mt-1;">Provided on your layout
+                        proposal sheet or site visit confirmation email.</small>
                 </div>
                 <div class="mb-3">
                     <label for="signup-password" class="form-label-premium">Set Password *</label>
-                    <input type="password" id="signup-password" class="form-control-premium w-100" required placeholder="Min 8 characters">
+                    <input type="password" id="signup-password" class="form-control-premium w-100" required
+                        placeholder="Min 8 characters">
+                </div>
+                <div class="mb-3">
+                    <label for="signup-confirm-password" class="form-label-premium">Confirm Password *</label>
+                    <input type="password" id="signup-confirm-password" class="form-control-premium w-100" required
+                        placeholder="Repeat password">
                 </div>
                 <div class="mb-4 form-check">
                     <input type="checkbox" class="form-check-input" id="signup-agree" required>
-                    <label class="form-check-label text-secondary" for="signup-agree" style="font-size: 0.85rem; cursor: pointer; user-select: none;">I agree to the <a href="404.html" style="color: var(--accent-blue);">Terms and Conditions</a> and Privacy Policy *</label>
+                    <label class="form-check-label text-secondary" for="signup-agree"
+                        style="font-size: 0.85rem; cursor: pointer; user-select: none;">I agree to the <a
+                            href="404.html" style="color: var(--accent-blue);">Terms and Conditions</a> and Privacy
+                        Policy</label>
                 </div>
-                <button type="submit" class="btn-premium btn-premium-primary w-100 py-2.5 mb-3">Create Client Account</button>
+                <button type="submit" class="btn-premium btn-premium-primary w-100 py-2.5 mb-3">Create Client
+                    Account</button>
             </form>
 
             <div class="position-relative text-center my-4">
                 <hr class="text-secondary opacity-25">
-                <span class="position-absolute top-50 start-50 translate-middle px-3 text-secondary" style="font-size: 0.75rem; background-color: var(--card-bg);">OR</span>
+                <span class="position-absolute top-50 start-50 translate-middle px-3 text-secondary"
+                    style="font-size: 0.75rem; background-color: var(--card-bg);">OR</span>
             </div>
 
             <div class="d-flex gap-2 mb-3">
-                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                <button type="button"
+                    class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2"
+                    style="font-size: 0.85rem;">
                     <i class="fa-brands fa-google" style="color: #EA4335;"></i> Google
                 </button>
-                <button type="button" class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2" style="font-size: 0.85rem;">
+                <button type="button"
+                    class="btn-premium btn-premium-secondary d-flex align-items-center justify-content-center gap-2 flex-grow-1 py-2"
+                    style="font-size: 0.85rem;">
                     <i class="fa-brands fa-apple"></i> Apple
                 </button>
             </div>
-            
+
             <div class="text-center text-secondary" style="font-size: 0.85rem;">
                 Already have project access? <a href="login.html" style="color: var(--accent-blue);">Sign in</a>
             </div>
@@ -99,13 +125,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
-    
+
     <!-- Signup Simulation -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('signup-form');
+            const password = document.getElementById('signup-password');
+            const confirmPassword = document.getElementById('signup-confirm-password');
+
+            function validatePassword() {
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords Don't Match");
+                } else {
+                    confirmPassword.setCustomValidity('');
+                }
+            }
+
+            password.addEventListener('change', validatePassword);
+            confirmPassword.addEventListener('keyup', validatePassword);
+
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
+
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.reportValidity();
+                    return;
+                }
+
                 const name = document.getElementById('signup-name').value;
 
                 // Simple simulated transition to login
@@ -135,4 +181,5 @@
         });
     </script>
 </body>
+
 </html>

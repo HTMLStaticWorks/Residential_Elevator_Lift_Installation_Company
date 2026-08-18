@@ -108,4 +108,64 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 5. Back to Top Button with Scroll Progress
+    const backToTopContainer = document.createElement('div');
+    backToTopContainer.id = 'back-to-top-container';
+    backToTopContainer.className = 'back-to-top-container';
+    backToTopContainer.innerHTML = `
+        <svg class="progress-ring" width="48" height="48">
+            <circle class="progress-ring__circle-bg" stroke="var(--border-color)" stroke-width="3" fill="transparent" r="21" cx="24" cy="24"/>
+            <circle class="progress-ring__circle" stroke="var(--accent-blue)" stroke-width="3" fill="transparent" r="21" cx="24" cy="24" stroke-dasharray="131.95" stroke-dashoffset="131.95"/>
+        </svg>
+        <button class="back-to-top-btn" aria-label="Scroll back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    `;
+    document.body.appendChild(backToTopContainer);
+
+    const progressCircle = backToTopContainer.querySelector('.progress-ring__circle');
+    const backToTopBtn = backToTopContainer.querySelector('.back-to-top-btn');
+    const circumference = 2 * Math.PI * 21; // ~131.95
+
+    const updateScrollProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        
+        if (docHeight > 0) {
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            const offset = circumference - (scrollPercent / 100) * circumference;
+            progressCircle.style.strokeDashoffset = offset;
+        } else {
+            progressCircle.style.strokeDashoffset = circumference;
+        }
+
+        if (scrollTop > 300) {
+            backToTopContainer.classList.add('visible');
+        } else {
+            backToTopContainer.classList.remove('visible');
+        }
+    };
+
+    window.addEventListener('scroll', updateScrollProgress);
+    updateScrollProgress(); // Trigger once in case page starts scrolled down
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 6. Mobile Menu Theme Toggle Text Removal
+    const mobileThemeBtn = document.getElementById('theme-toggle-mobile');
+    if (mobileThemeBtn) {
+        const icon = mobileThemeBtn.querySelector('i');
+        if (icon) {
+            mobileThemeBtn.innerHTML = '';
+            mobileThemeBtn.appendChild(icon);
+            icon.className = icon.className.replace('me-2', '');
+        }
+    }
 });
+

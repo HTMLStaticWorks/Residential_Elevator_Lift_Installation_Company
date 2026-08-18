@@ -307,6 +307,12 @@ a:hover {
     color: var(--accent-blue);
     border-color: var(--accent-blue);
 }
+#nav-cta-signup {
+    height: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 
 /* Hamburger mobile menu button */
 .hamburger-btn {
@@ -495,7 +501,13 @@ a:hover {
     top: 1rem;
     left: 1rem;
     z-index: 10;
+    background-color: var(--surface-light) !important;
+    color: var(--accent-blue) !important;
+    border: 1px solid var(--border-color) !important;
+    font-weight: 600 !important;
+    box-shadow: var(--shadow-sm) !important;
 }
+
 
 .product-content {
     padding: 1.5rem;
@@ -914,10 +926,14 @@ a:hover {
     border-color: var(--accent-blue);
     box-shadow: var(--shadow-md);
 }
+.pricing-card.featured .pricing-header {
+    padding-top: 2.75rem;
+}
 .pricing-card-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.85rem;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--accent-blue);
     color: var(--surface-light);
     font-family: var(--font-tech);
@@ -925,7 +941,9 @@ a:hover {
     font-weight: 600;
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
+    white-space: nowrap;
 }
+
 .pricing-header {
     padding: 2rem;
     border-bottom: 1px solid var(--border-color);
@@ -1203,6 +1221,9 @@ a:hover {
     max-width: 480px;
 }
 @media (max-width: 576px) {
+    .auth-container {
+        padding: 5.5rem 1rem 3rem 1rem;
+    }
     .auth-card {
         padding: 1.5rem;
     }
@@ -1284,9 +1305,16 @@ a:hover {
     background-color: var(--accent-blue);
     color: var(--surface-light);
 }
+.footer-premium .navbar-brand-premium {
+    font-size: 1.3rem !important;
+}
 .footer-premium .navbar-brand-premium.text-white {
     color: var(--text-primary) !important;
 }
+.footer-premium .navbar-brand-premium i {
+    color: var(--accent-blue) !important;
+}
+
 
 /* Subpage Header */
 .subpage-header-premium {
@@ -1438,3 +1466,146 @@ html[dir="rtl"] .faq-trigger-premium {
 html[dir="rtl"] .faq-trigger-premium i {
     float: left;
 }
+
+/* Premium Back to Top Button with Scroll Progress */
+.back-to-top-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.4s;
+}
+
+.back-to-top-container.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+.progress-ring__circle-bg {
+    stroke: var(--border-color);
+    opacity: 0.4;
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.1s linear;
+    stroke-linecap: round;
+}
+
+.back-to-top-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    z-index: 1;
+}
+
+.back-to-top-btn i {
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #ffffff;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.back-to-top-btn:hover i {
+    animation: floatUp 1.2s infinite ease-in-out;
+}
+
+.back-to-top-btn:active {
+    transform: scale(0.92) translateY(-1px);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}
+
+/* RTL Support */
+html[dir="rtl"] .back-to-top-container {
+    right: auto;
+    left: 30px;
+}
+
+/* Product Page 2x2 Filter Grid for Desktop */
+@media (min-width: 992px) {
+    .product-filter-grid-2x2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+    .product-filter-grid-2x2 .filter-btn-premium {
+        text-align: center;
+        width: 100%;
+        padding: 0.5rem 0.5rem !important;
+    }
+}
+
+/* Service Page Detail Cards styling */
+.service-detail-card {
+    transition: var(--transition);
+}
+.service-detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--accent-blue) !important;
+}
+.service-card-image {
+    height: 180px;
+    overflow: hidden;
+    background-color: #E2E8F0;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-detail-card:hover .service-card-image img {
+    transform: scale(1.05);
+}
+
+/* Home 2 page radio cards grid on tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-radio-card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+
+
