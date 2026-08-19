@@ -167,5 +167,29 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.className = icon.className.replace('me-2', '');
         }
     }
+
+    // 7. Password visibility toggle
+    const togglePasswordButtons = document.querySelectorAll('.password-toggle-btn');
+    togglePasswordButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const wrapper = button.closest('.password-field-wrapper');
+            if (!wrapper) return;
+            const input = wrapper.querySelector('input');
+            const icon = button.querySelector('i');
+            if (input && icon) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                    button.setAttribute('aria-label', 'Hide password');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                    button.setAttribute('aria-label', 'Show password');
+                }
+            }
+        });
+    });
 });
 
