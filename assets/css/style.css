@@ -383,6 +383,17 @@ a:hover {
         display: block;
         border-bottom: 1px solid var(--border-color);
     }
+    .nav-item-dropdown .nav-link-premium {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-item-dropdown .nav-link-premium i {
+        transition: transform 0.3s ease;
+    }
+    .nav-item-dropdown .nav-link-premium[aria-expanded="true"] i {
+        transform: rotate(180deg);
+    }
     .nav-item-dropdown .dropdown-menu-premium {
         position: static;
         box-shadow: none;
@@ -393,6 +404,9 @@ a:hover {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         background-color: transparent;
+    }
+    .nav-item-dropdown .dropdown-menu-premium .dropdown-item-premium {
+        padding: 0.5rem 0.75rem;
     }
     /* Toggle display states for header actions & drawer actions at 1024px */
     .navbar-premium .d-none.d-lg-flex,
@@ -408,9 +422,15 @@ a:hover {
 .hero-premium {
     background-color: var(--primary-navy);
     color: #F8FAFC;
-    padding: 8rem 0 6rem 0;
+    padding: 7rem 0 5rem 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
+}
+.hero-premium > .container {
+    width: 100%;
 }
 .hero-premium h1 {
     color: #F8FAFC;
@@ -424,7 +444,8 @@ a:hover {
 }
 @media (max-width: 768px) {
     .hero-premium {
-        padding: 6rem 0 4rem 0;
+        padding: 5.5rem 0 3.5rem 0;
+        min-height: auto;
     }
     .hero-premium h1 {
         font-size: 2.5rem;
@@ -1360,9 +1381,16 @@ html[dir="rtl"] .password-toggle-btn {
 .subpage-header-premium {
     background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
     border-bottom: 1px solid var(--border-color);
-    padding: 4rem 0;
+    padding: 4.5rem 0;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     transition: var(--transition);
+}
+.subpage-header-premium > .container {
+    width: 100%;
 }
 .subpage-header-premium h1 {
     color: var(--text-primary);
@@ -1373,8 +1401,27 @@ html[dir="rtl"] .password-toggle-btn {
 .subpage-header-premium p {
     color: var(--text-secondary);
     font-size: 1.05rem;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .subpage-header-premium {
+        padding: 3.5rem 0;
+        min-height: 190px;
+    }
+    .subpage-header-premium h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Details Hero Section (product-details and project-details) */
+.details-hero-section {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+}
+.details-hero-section > .container {
+    width: 100%;
 }
 
 /* Glassmorphism subtle overlay style */
@@ -1646,6 +1693,167 @@ html[dir="rtl"] .back-to-top-container {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+/* Site Visit Assessment & Checklist Sections */
+.survey-eval-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.survey-eval-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-blue);
+}
+.survey-eval-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(37, 99, 243, 0.08);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+.survey-eval-card:hover .survey-eval-card-icon {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+.survey-step-num {
+    font-family: var(--font-tech);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-amber);
+    margin-bottom: 0.5rem;
+}
+.survey-eval-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.survey-eval-list li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.survey-eval-list li i {
+    color: var(--accent-blue);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.survey-checklist-card,
+.survey-deliverables-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.25rem;
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.survey-checklist-card:hover,
+.survey-deliverables-card:hover {
+    box-shadow: var(--shadow-md);
+}
+.survey-deliverables-card {
+    border-top: 4px solid var(--accent-blue);
+}
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.checklist-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.checklist-item i {
+    color: #10B981;
+    font-size: 1.15rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.deliverable-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.deliverable-item:last-child {
+    margin-bottom: 0;
+}
+.deliverable-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(37, 99, 243, 0.08);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.survey-trust-strip {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin-top: 3.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.trust-metric-box {
+    text-align: center;
+    padding: 0.5rem;
+}
+.trust-metric-value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--accent-blue);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+.trust-metric-label {
+    font-family: var(--font-tech);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* FAQ View All CTA */
+.faq-view-all-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
 
 
 

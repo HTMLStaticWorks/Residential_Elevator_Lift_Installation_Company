@@ -240,3 +240,14 @@ body.dark-theme .border-start,
 body.dark-theme .border-end {
     border-color: var(--border-color) !important;
 }
+
+/* Survey Assessment & Deliverables Dark Mode */
+body.dark-theme .survey-eval-card-icon,
+body.dark-theme .deliverable-icon-box {
+    background-color: rgba(37, 99, 243, 0.15);
+    color: #60A5FA;
+}
+body.dark-theme .survey-trust-strip {
+    background-color: var(--card-bg);
+}
+

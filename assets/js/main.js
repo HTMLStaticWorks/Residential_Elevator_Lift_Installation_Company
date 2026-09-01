@@ -55,10 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const toggleLink = item.querySelector('.nav-link-premium');
         const dropdownMenu = item.querySelector('.dropdown-menu-premium');
 
-        // Toggle dropdowns on click for mobile/tablet screen sizes
+        if (!toggleLink || !dropdownMenu) return;
+
+        // Toggle dropdowns on click for mobile/tablet screen sizes (<= 1024px)
         toggleLink.addEventListener('click', (e) => {
-            if (window.innerWidth < 992) {
-                e.preventDefault(); // Stop default navigation on mobile
+            if (window.innerWidth <= 1024) {
+                e.preventDefault(); // Stop default navigation on mobile/tablet drawer
                 const isShown = dropdownMenu.classList.contains('show');
                 
                 // Hide other dropdown menus first
@@ -67,26 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 dropdownMenu.classList.toggle('show', !isShown);
+                toggleLink.setAttribute('aria-expanded', !isShown);
             }
         });
 
-        // Desktop Hover triggers
+        // Desktop Hover triggers (> 1024px)
         item.addEventListener('mouseenter', () => {
-            if (window.innerWidth >= 992) {
+            if (window.innerWidth > 1024) {
                 dropdownMenu.classList.add('show');
             }
         });
 
         item.addEventListener('mouseleave', () => {
-            if (window.innerWidth >= 992) {
+            if (window.innerWidth > 1024) {
                 dropdownMenu.classList.remove('show');
             }
         });
     });
 
-    // Close dropdowns if clicking anywhere outside on desktop
+    // Close dropdowns if clicking anywhere outside on desktop (> 1024px)
     document.addEventListener('click', (e) => {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth > 1024) {
             dropdownItems.forEach(item => {
                 const dropdownMenu = item.querySelector('.dropdown-menu-premium');
                 if (dropdownMenu && !item.contains(e.target)) {
