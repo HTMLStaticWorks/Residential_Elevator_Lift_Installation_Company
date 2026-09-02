@@ -1819,15 +1819,23 @@ html[dir="rtl"] .back-to-top-container {
 
 .survey-trust-strip {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 2rem;
-    margin-top: 3.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.75rem 0;
     box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 .trust-metric-box {
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+@media (min-width: 992px) {
+    .survey-trust-strip .col-lg-3:not(:last-child) .trust-metric-box {
+        border-right: 1px solid var(--border-color);
+    }
+}
+html[dir="rtl"] .survey-trust-strip .col-lg-3:not(:last-child) .trust-metric-box {
+    border-right: none;
+    border-left: 1px solid var(--border-color);
 }
 .trust-metric-value {
     font-family: var(--font-heading);
